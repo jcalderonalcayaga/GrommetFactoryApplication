@@ -39,6 +39,12 @@ public class GrommetController {
 
         model.addAttribute("grommetList", grommets);
 
+
         return "DisplayGrommets";
+    }
+    @GetMapping("/resetGrommets")
+    public String reset(){
+        grommets.clear();
+        return("redirect:/");
     }
 }
